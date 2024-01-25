@@ -29,7 +29,7 @@ User-Agent: curl/7.68.0
 
     //将/请求的相关数据硬编码到了变量get中
     //由于缓冲区中接收的数据是原始字节，所以我们使用字节字符串语法b""将get的文本内容转换为字节字符串
-    let get = b"GET / HTTP/1.1";
+    let get = b"GET / HTTP/1.1\r\n";
 
     //检查buffer中的数据是否以get中的字节开头
     if buffer.starts_with(get) {
